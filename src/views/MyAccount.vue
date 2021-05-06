@@ -25,11 +25,11 @@
 
 <script>
 import axios from 'axios'
-//import OrderSummary from '@/components/OrderSummary.vue'
+import OrderSummary from '@/components/OrderSummary.vue'
 export default {
     name: 'MyAccount',
     components: {
-     //   OrderSummary
+        OrderSummary
     },
     data() {
         return {
@@ -49,7 +49,7 @@ export default {
             this.$store.commit('removeToken')
             this.$router.push('/')
         },
-        /*
+        
         async getMyOrders() {
             this.$store.commit('setIsLoading', true)
             await axios
@@ -62,7 +62,7 @@ export default {
                 })
             this.$store.commit('setIsLoading', false)
         }
-        */
+        
     }
 }
 </script>

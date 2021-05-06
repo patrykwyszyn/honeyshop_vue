@@ -140,14 +140,14 @@ export default {
     mounted() {
         document.title = 'Checkout | HoneyShop'
         this.cart = this.$store.state.cart
-        /*
+        
         if (this.cartTotalLength > 0) {
-            this.stripe = Stripe('pk_test_51H1HiuKBJV2qfWbD2gQe6aqanfw6Eyul5PO2KeOuSRlUMuaV4TxEtaQyzr9DbLITSZweL7XjK3p74swcGYrE2qEX00Hz7GmhMI')
+            this.stripe = Stripe('pk_test_51Io3JeLWvfTiDVFiL57uFYsjeTaXuYVnZJnkZwfQI22jYgoyuIPypkaHqapkwzwDdsKCeuJRt1Jv7dyXwIeP2KC600cFmNxpkE')
             const elements = this.stripe.elements();
             this.card = elements.create('card', { hidePostalCode: true })
             this.card.mount('#card-element')
         }
-        */
+        
     },
     methods: {
         getItemTotal(item) {
@@ -192,9 +192,10 @@ export default {
             
             
         }, 
-        /*
+        
         async stripeTokenHandler(token) {
             const items = []
+
             for (let i = 0; i < this.cart.items.length; i++) {
                 const item = this.cart.items[i]
                 const obj = {
@@ -227,7 +228,7 @@ export default {
                 })
                 this.$store.commit('setIsLoading', false)
         }
-        */
+        
     },
     computed: {
         cartTotalPrice() {
